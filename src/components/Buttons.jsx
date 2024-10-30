@@ -1,9 +1,9 @@
 import styles from './Buttons.module.css'
-const Buttons = ({ Buttons }) => {
+const Buttons = ({ Buttons, onButtonCLick }) => {
     return (
         <div className={styles.buttons}>
             {Buttons.map((item) => (
-                <button key={item} className={styles.button}>{item}</button>
+                <button key={item} onClick={() => onButtonCLick(item)} className={styles.button}>{item}</button>
             ))}
 
         </div>
